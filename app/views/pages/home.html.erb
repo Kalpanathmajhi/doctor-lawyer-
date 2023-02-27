@@ -1,0 +1,19 @@
+<h1>Working Hours</h1>
+
+<% @working_hours.each do |working_hour| %>
+  <p>
+    <strong><%= working_hour.day %>:</strong>
+    <%= working_hour.start_time.strftime('%H:%M') %> - <%= working_hour.end_time.strftime('%H:%M') %>
+    <%= link_to 'Edit', edit_working_hour_path(working_hour) %>
+  </p>
+<% end %>
+
+<%= link_to 'Add Working Hour', new_working_hour_path %>
+<h1>Working Hours</h1>
+
+<% @working_hours.each do |working_hour| %>
+  <p>
+    <strong><%= working_hour.day %>:</strong>
+    <%= working_hour.start_time.strftime('%H:%M') %> - <%= working_hour.end_time.strftime('%H:%M') %>
+  </p>
+<% end %>

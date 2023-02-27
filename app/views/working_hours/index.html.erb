@@ -1,0 +1,8 @@
+<h1>Working Hours</h1>
+
+<% @working_hours.each do |working_hour| %>
+  <p>
+    <strong><%= working_hour.day %>:</strong>
+    <%= working_hour.start_time.strftime('%H:%M') %> - <%= working_hour.end_time.strftime('%H:%M') %>
+  </p>
+<% end %>
